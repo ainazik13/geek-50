@@ -40,18 +40,22 @@
       }
     }
     nav {
-
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 171%;
+      letter-spacing: -0.01em;
+      color: #252c32;
       ul {
         display: flex;
         align-items:center;
-        gap: 40px;
+        gap: 32px;
 
         li {
           font-size: 1.142rem;
           line-height: 24px;
           a {
             padding-right: 20px;
-
             background-repeat: no-repeat;
             background-position: right;
           }
@@ -60,7 +64,7 @@
     }
 }
 .container{
-  margin: 1 auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
 }

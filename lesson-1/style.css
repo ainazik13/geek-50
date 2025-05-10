@@ -42,6 +42,14 @@
   font-size: 1.714rem;
   font-weight: 700;
 }
+.header nav {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: -0.01em;
+  color: #252c32;
+}
 .header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,7 +57,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 40px;
+  gap: 32px;
 }
 .header nav ul li {
   font-size: 1.142rem;
