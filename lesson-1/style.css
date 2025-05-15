@@ -21,55 +21,24 @@
   background-color: #ffffff;
   margin-inline: auto;
 }
-.header .nav ul {
+.header .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style: none;
-  gap: 16px;
-  position: center;
-  margin: 0 auto;
+}
+.header .logo {
+  width: 142px;
+  height: 32px;
 }
 @media (max-width: 960px) {
   .header .nav {
     display: none;
   }
 }
-.header .logo a {
-  font-size: 1.714rem;
-  font-weight: 700;
-}
-.header nav {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 171%;
-  letter-spacing: -0.01em;
-  color: #252c32;
-}
-.header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 32px;
-}
-.header nav ul li {
-  font-size: 1.142rem;
-  line-height: 24px;
-}
-.header nav ul li a {
-  padding-right: 20px;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.container {
+.header .container {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,4 +46,54 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1920px) {
+  .nav {
+    display: inline;
+  }
+}
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: 400;
+  list-style: none;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: -0.01em;
+  color: #252c32;
+}
+.nav ul a {
+  border-radius: 6px;
+  padding: 4px 10px;
+  width: 99px;
+  height: 32px;
+}
+
+@media (max-width: 360px) {
+  .nav {
+    display: none;
+  }
+}
+.burger {
+  display: none;
+  stroke-width: 2.5px;
+  stroke: #5b6871;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media (max-width: 1290px) {
+  .burger {
+    display: block;
+  }
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
 }
