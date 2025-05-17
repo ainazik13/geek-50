@@ -51,7 +51,9 @@
 
 @media (max-width: 1920px) {
   .nav {
-    display: inline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 .nav ul {
@@ -78,15 +80,26 @@
     display: none;
   }
 }
-.burger {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  stroke-width: 2.5px;
-  stroke: #5b6871;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.menu-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25px;
+  width: 30px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+.menu-container .burger {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: black;
+  width: 250px;
+  height: 100%;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
 }
 
 .left {

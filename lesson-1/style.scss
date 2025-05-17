@@ -37,7 +37,7 @@
 }
 @media (max-width: 1920px) {
   .nav {
-    display: inline;
+    display: flex;
   }
 }
 .nav {
@@ -63,15 +63,28 @@
     display: none;
   }
 }
+.menu-container{
+  position: relative;
+  display: flex;
+  height: 25px;
+  width: 30px;
+  margin-top: 60px;
+  margin-left: 60px;
+
 .burger{
-  display: inline-flex;
-  stroke-width: 2.50px;
-  stroke: #5b6871;
-  align-items: flex-end;
+  display: block;
+    position: fixed;
+    top:0;
+    right: 0;
+    background-color: black;
+    width: 250px;
+    height: 100%;
+    transform: translate(100%);
 
-
+  }
 }
 .left{
   display: flex;
   margin-right: 30px;
 }
+
