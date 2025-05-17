@@ -17,6 +17,7 @@
 .left{
   display: flex;
   align-items: center;
+  word-spacing:10px;
 }
   .logo {
         width: 142px;
@@ -63,10 +64,11 @@
   }
 }
 .burger{
-  display: none;
+  display: inline-flex;
   stroke-width: 2.50px;
   stroke: #5b6871;
-  align-items: end;
+  align-items: flex-end;
+
 
 }
 .left{

@@ -28,6 +28,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  word-spacing: 10px;
 }
 .header .logo {
   width: 142px;
@@ -78,12 +79,14 @@
   }
 }
 .burger {
-  display: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   stroke-width: 2.5px;
   stroke: #5b6871;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
 }
 
 .left {
