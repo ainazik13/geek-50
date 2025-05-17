@@ -21,26 +21,33 @@
   background-color: #ffffff;
   margin-inline: auto;
 }
-.header .left {
+
+.left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  word-spacing: 10px;
-  margin-right: 30px;
+  gap: 32px;
 }
-.header .logo {
+
+.logo {
   width: 142px;
   height: 32px;
 }
+
 @media (max-width: 960px) {
-  .header .nav {
-    display: none;
+  .nav {
+    display: none !important;
+  }
+  .burger {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
-.header .container {
+.container {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,6 +63,9 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .burger {
+    display: none;
+  }
 }
 .nav ul {
   display: -webkit-box;
@@ -66,7 +76,7 @@
   list-style: none;
   font-size: 14px;
   line-height: 171%;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.01rem;
   color: #252c32;
 }
 .nav ul a {
@@ -80,6 +90,11 @@
   .nav {
     display: none;
   }
+  .burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .menu-container {
   position: relative;
@@ -88,19 +103,29 @@
   display: flex;
   height: 25px;
   width: 30px;
-  margin-top: 60px;
-  margin-left: 60px;
 }
-.menu-container .burger {
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
+
+.burger {
+  display: none;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-left: 10px;
+}
+.burger span {
+  width: 30px;
+  height: 5px;
   background-color: #5b6871;
-  width: 250px;
-  height: 100%;
-  -webkit-transform: translate(100%);
-          transform: translate(100%);
+  border-radius: 10px;
 }
 
 .right {
