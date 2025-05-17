@@ -1,0 +1,77 @@
+:root{
+  --color-white: #fff;
+  --color-black:#000;
+  --color-blue:#00f;
+  --primary-color:yellow;
+  --secondary-color: green;
+  --border:1px solid var(--color-black);
+  --input-height:42px;
+  --container-width:500px;
+  --container-padding:20px ;
+  --container-width-padding:30px;
+  --border-radius:10px ;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+$color: blue;
+
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  @include flex-center;
+  background-color: $color;
+  max-width: calc (var(--container-width) +var(--container-width-padding));
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+@mixin  costome-button( $bg-color, $text-color,$font-size,$bg-color-hover:transpa){
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: $font-size;
+  padding: 10px;
+  &:hover{
+    background-color: $bg-color;
+  }
+}
+.btn{
+  @include costome-button(green,yellow,30px)
+}
+@mixin responsive($size){
+  @media (max-width: $size) {
+    @content;
+  }
+}
+@include responsive(760px){
+  body{
+    background-color: red;
+  }
+}
+.banner{
+  text-transform: uppercase;
+  font-family: "Heebo",sans-serif;
+  font-weight: 700;
+  color: #000;
+}
+.banner__info{
+  display: flex;
+  align-items: end;
+  font-size: 30px;
+  line-height: 127%;
+}
+.banner__info::before{
+  content: '';
+  width: clamp(60px,1.56vw,194px);
+  background: url("");
+  aspect-ratio: 1;
+  margin-right: 30px;
+}
+.title{
+  font-size: 360px;
+  line-height: 14%;
+}

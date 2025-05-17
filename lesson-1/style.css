@@ -21,47 +21,25 @@
   background-color: #ffffff;
   margin-inline: auto;
 }
-.header .nav ul {
+.header .left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  list-style: none;
-  gap: 16px;
-  position: center;
-  margin: 0 auto;
+  word-spacing: 10px;
+}
+.header .logo {
+  width: 142px;
+  height: 32px;
 }
 @media (max-width: 960px) {
   .header .nav {
     display: none;
   }
 }
-.header .logo a {
-  font-size: 1.714rem;
-  font-weight: 700;
-}
-.header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 40px;
-}
-.header nav ul li {
-  font-size: 1.142rem;
-  line-height: 24px;
-}
-.header nav ul li a {
-  padding-right: 20px;
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.container {
+.header .container {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,4 +47,64 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1920px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Enter sans-serif;
+  font-weight: 400;
+  list-style: none;
+  font-size: 14px;
+  line-height: 171%;
+  letter-spacing: -0.01em;
+  color: #252c32;
+}
+.nav ul a {
+  border-radius: 6px;
+  padding: 4px 10px;
+  width: 99px;
+  height: 32px;
+}
+
+@media (max-width: 360px) {
+  .nav {
+    display: none;
+  }
+}
+.menu-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25px;
+  width: 30px;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+.menu-container .burger {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: black;
+  width: 250px;
+  height: 100%;
+  -webkit-transform: translate(100%);
+          transform: translate(100%);
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 30px;
 }
