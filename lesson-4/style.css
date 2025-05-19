@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-inline: auto;
+}
+
+.container {
+  max-width: 1200px;
+  background-color: #3c99ea;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  position: relative;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 100%;
+  border: 1px solid purple;
+  -webkit-transition: transform(), transform();
+  transition: transform(), transform();
+  transition: transform();
+}
+
+input:checked + .label .icon::after {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.label::before,
+.label::after {
+  content: "";
+  position: absolute;
+  background-color: purple;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+}
+
+.icon::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+label::after {
+  content: "+";
+  width: 20px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid purple;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+label::after {
+  content: "-";
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.content {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease opacity 0.3s ease;
+  transition: max-height 0.3s ease opacity 0.3s ease;
+}
+
+input:checked-.content {
+  max-height: 1000px;
+}
